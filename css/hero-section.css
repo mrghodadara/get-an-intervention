@@ -1,3 +1,4 @@
+/* hero-section */
 .hero {
   background-image: linear-gradient(
       180deg,
@@ -12,14 +13,14 @@
   position: relative;
 }
 
-/* hero-section */
 .hero-section {
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   padding: 78px 0px 74px 0px;
-  gap: 109px;
+  gap: 32px;
 }
 
 .hero-content {
@@ -62,11 +63,12 @@
   flex-direction: column;
   align-items: center;
   gap: 34px;
-  padding: 51px 28px 56px;
+  padding: 51px 28px 56px 28px;
   background: linear-gradient(180deg, #2a7d6c 0%, rgba(62, 105, 96, 0.62) 100%);
   border-radius: 12px;
   box-shadow: 0px 10px 50px 0px #0000001f;
   max-width: 472px;
+  z-index: 50;
 }
 
 .wave-image {
@@ -141,7 +143,7 @@
   width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 2px;
-  background-color: transparent;
+  background: #ffffff0a;
   padding: 14px 16px;
   color: var(--white-color);
   font-size: 16px;
@@ -157,6 +159,7 @@
 .form-group select.has-content {
   border: 1px solid var(--white-color);
   outline: none;
+  background: transparent;
 }
 
 /* Floating label styles */
@@ -173,7 +176,16 @@
   line-height: 100%;
   letter-spacing: 0px;
   vertical-align: middle;
-  background-color: #2a7d6c;
+}
+
+.form-group select:focus + label,
+.form-group select.has-content + label {
+  background-color: #306d60;
+}
+
+.form-group input:focus + label,
+.form-group input.has-content + label {
+  background-color: #2d7768;
 }
 
 .form-group input.error,
@@ -218,7 +230,7 @@ select.has-error + label {
   left: 0;
   margin-top: 8px;
   background-color: #ff7777;
-  color: #fff;
+  color: var(--white-color);
   padding: 10px 14px;
   border-radius: 8px;
   font-size: 0.85rem;
@@ -252,7 +264,7 @@ select.has-error + label {
   justify-content: center;
   gap: 8px;
   margin-top: 20px;
-  background: #5bc8af;
+  background: var(--primary-color);
   color: var(--white-color);
   font-weight: 700;
   font-size: 16px;
@@ -370,20 +382,20 @@ body.no-scroll {
 }
 
 .drawer-links a {
-  color: #fff;
+  color: var(--white-color);
   text-decoration: none;
   font-weight: 500;
   font-size: 1rem;
 }
 
 .drawer-call {
+  color: var(--white-color);
   font-size: 0.85rem;
-  color: #fff;
   margin-top: 2rem;
 }
 
 .drawer-call a {
-  color: #fff;
+  color: var(--white-color);
   font-weight: bold;
   margin-top: 0.25rem;
 }
@@ -408,11 +420,19 @@ body.no-scroll {
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 980px) {
+  .hero {
+    background-position: right bottom;
+  }
+
   .hero-section {
     flex-direction: column;
-    gap: 10px;
+    gap: 2px;
     padding: 56px 0px 185px 0px;
+  }
+
+  .hero-content {
+    gap: 16px;
   }
 
   .nav-links-divider,
@@ -432,10 +452,10 @@ body.no-scroll {
   .hero-content .description {
     text-align: center;
     font-size: 18px;
-    color: var(--white-color);
+    color: #ffffffcc;
     font-weight: 400;
     line-height: 28px;
-    max-width: 550px;
+    max-width: 555px;
     margin: 0 auto;
   }
 }
@@ -447,6 +467,29 @@ body.no-scroll {
 }
 
 @media (max-width: 625px) {
+  .hero {
+    background-image: linear-gradient(
+        180deg,
+        #194d41 0%,
+        rgba(25, 77, 65, 0.7) 100%
+      ),
+      url('../assets/images/hero/hero-bg-mobile.png');
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: relative;
+    background-color: #1b4835;
+  }
+
+  .wave-image_2 {
+    background-image: url('../assets/images/hero/wave_white.svg');
+  }
+
+  .hero-section {
+    gap: 12px;
+  }
+
   .nav-links-call-now_mobile {
     display: none;
   }
@@ -467,6 +510,10 @@ body.no-scroll {
   .hero-content .description {
     font-size: 14px;
     line-height: 24px;
+  }
+
+  .hero-section .contact-form {
+    padding: 36px 16px 56px 16px;
   }
 
   .contact-form-fields {

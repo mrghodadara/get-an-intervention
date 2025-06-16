@@ -189,7 +189,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Custom Slider for testimonials
+// Slider for testimonials
 function initSlider() {
   const container = document.querySelector('.slider-container');
   const wrapper = document.querySelector('.slider-wrapper');
@@ -281,9 +281,9 @@ function initSlider() {
   }
 
   function startAutoplay() {
-    autoplayInterval = setInterval(() => {
-      slide('next');
-    }, 5000);
+    // autoplayInterval = setInterval(() => {
+    //   slide('next');
+    // }, 10000);
   }
 
   function stopAutoplay() {

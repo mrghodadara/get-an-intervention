@@ -1,6 +1,6 @@
 /* Color variables */
 :root {
-  --white-color: #FFFFFF;
+  --white-color: #ffffff;
   --primary-color: #5bc8af;
   --secondary-color: #297c6b;
   --background-color: #194d44;
@@ -15,6 +15,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 html {
@@ -34,7 +35,6 @@ a {
   margin: 0 auto;
   padding: 0px;
 }
-
 
 /* Navbar */
 .navbar {
@@ -195,7 +195,7 @@ a {
   top: 16px;
   right: 16px;
   background: rgba(0, 0, 0, 0.6);
-  color: #fff;
+  color: var(--white-color);
   border: none;
   width: 40px;
   height: 40px;
@@ -247,6 +247,10 @@ a {
 }
 
 @media (max-width: 580px) {
+  .container {
+    padding: 0px 16px;
+  }
+
   .footer {
     padding: 34px 0px;
   }

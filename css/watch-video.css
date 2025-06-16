@@ -1,242 +1,277 @@
 /* WATCH THE VIDEO */
 .watch-video-section {
-    display: flex;
-    flex-direction: row;
-    height: 648px;
-    background-image: url('../assets/images/watch-video/background-image.png'), url('../assets/images/watch-video/mask-group-3.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: left center, right center;
-    background-size: 52% 100%, 54% 100%;
+  display: flex;
+  flex-direction: row;
+  height: 648px;
+  background-image: url('../assets/images/watch-video/background-image.png'),
+    url('../assets/images/watch-video/mask-group-3.png');
+  background-repeat: no-repeat, no-repeat;
+  background-position: left center, right center;
+  background-size: 52% 100%, 54% 100%;
 }
 
 .watch-video-content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .content-wrapper {
-    max-width: 472px;
-    margin-right: 155px;
-    margin-left: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 48px;
+  max-width: 472px;
+  margin-right: 155px;
+  margin-left: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
 }
 
 .watch-video-heading {
-    color: var(--white-color);
-    font-size: 44px;
-    line-height: 52px;
-    letter-spacing: 0px;
-    vertical-align: middle;
-    font-weight: 800;
+  color: var(--white-color);
+  font-size: 44px;
+  line-height: 52px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+  font-weight: 800;
 }
 
 .watch-video-heading span {
-    color: transparent;
-    -webkit-text-stroke: 1px var(--white-color);
-    text-stroke: 1px var(--white-color);
-    font-family: Arial, Helvetica, sans-serif;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--white-color);
+  text-stroke: 1px var(--white-color);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .watch-video-list {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 22px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
 .watch-video-list .list-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
 }
 
 .check-icon {
-    margin-top: 12px;
+  margin-top: 12px;
 }
 
 .watch-video-list .list-item h3 {
-    color: var(--white-color);
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 32px;
-    letter-spacing: 0px;
-    margin-bottom: 8px;
+  color: var(--white-color);
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  margin-bottom: 8px;
 }
 
 .watch-video-list .list-item p {
-    color: rgba(255, 255, 255, 0.8);
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0px;
 }
 
 .video-placeholder {
-    position: relative;
-    flex: 1;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  flex: 1;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 208px;
+  height: 208px;
+  transition: all 0.3s ease;
+  user-select: none;
+  background: #5bc8af1a;
+  border: 2px solid #ffffff4d;
+  border-radius: 50%;
 }
 
 .play-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    width: 208px;
-    height: 208px;
-    transition: all 0.3s ease;
-    user-select: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #5bc8afcc;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
 }
 
-.play-icon:hover {
-    width: 228px;
-    height: 228px;
+.play-icon:hover .play-icon-overlay {
+  width: 228px;
+  height: 228px;
 }
 
 .logo-icon {
-    position: absolute;
-    bottom: 36px;
-    right: 36px;
+  position: absolute;
+  bottom: 36px;
+  right: 36px;
 }
 
 /* Responsive */
+@media (max-width: 1280px) {
+  .watch-video-section {
+    height: auto;
+  }
+
+  .content-wrapper {
+    max-width: 520px;
+    margin-right: 40px;
+    padding: 80px 0px;
+  }
+}
+
 @media (max-width: 960px) {
-    .watch-video-section {
-        flex-direction: column;
-        height: auto;
-        background-image: url('../assets/images/watch-video/mobile-background-image.png'), url('../assets/images/watch-video/mask-group-3.png');
-        background-repeat: no-repeat, no-repeat;
-        background-position: center top, center bottom;
-        background-size: 100% 59%, contain;
-    }
+  .watch-video-section {
+    flex-direction: column;
+    height: auto;
+    background-image: url('../assets/images/watch-video/mobile-background-image.png'),
+      url('../assets/images/watch-video/mask-group-3.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center bottom;
+    background-size: 100% 59%, contain;
+  }
 
-    .video-placeholder {
-        min-height: 500px;
-    }
+  .video-placeholder {
+    min-height: 500px;
+  }
 
-    .content-wrapper {
-        max-width: 100%;
-        margin: 0px;
-        padding: 102px 24px 110px 48px;
-        gap: 64px;
-    }
+  .content-wrapper {
+    max-width: 100%;
+    margin: 0px;
+    padding: 102px 24px 110px 48px;
+    gap: 64px;
+  }
 
-    .watch-video-heading {
-        text-align: center;
-    }
+  .watch-video-heading {
+    text-align: center;
+  }
 
-    .play-icon {
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 200px;
-        height: 200px;
-    }
+  .play-icon {
+    width: 154px;
+    height: 154px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    .play-icon:hover {
-        width: 208px;
-        height: 208px;
-    }
+  .play-icon-overlay {
+    width: 200px;
+    height: 200px;
+  }
 
-    .logo-icon {
-        bottom: 49px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  .play-icon:hover .play-icon-overlay {
+    width: 212px;
+    height: 212px;
+  }
+
+  .logo-icon {
+    bottom: 49px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 580px) {
-    .watch-video-section {
-        flex-direction: column;
-        height: auto;
-        background-image: url('../assets/images/watch-video/mobile-background-image.png'), url('../assets/images/watch-video/mask-group-3.png');
-        background-repeat: no-repeat, no-repeat;
-        background-position: center top, center bottom;
-        background-size: 100% 69%, contain;
-    }
+  .watch-video-section {
+    flex-direction: column;
+    height: auto;
+    background-image: url('../assets/images/watch-video/mobile-background-image.png'),
+      url('../assets/images/watch-video/mask-group-3.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center bottom;
+    background-size: 100% 69%, contain;
+  }
 
-    .video-placeholder {
-        min-height: 300px;
-    }
+  .video-placeholder {
+    min-height: 300px;
+  }
 
-    .content-wrapper {
-        padding: 80px 16px 97px 16px;
-        gap: 36px;
-    }
+  .content-wrapper {
+    padding: 80px 16px 97px 16px;
+    gap: 36px;
+  }
 
-    .watch-video-heading {
-        font-size: 36px;
-        line-height: 48px;
-        text-align: center;
-    }
+  .watch-video-heading {
+    font-size: 36px;
+    line-height: 48px;
+    text-align: center;
+  }
 
-    .watch-video-list .list-item h3 {
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 24px;
-    }
+  .watch-video-list .list-item h3 {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+  }
 
-    .play-icon {
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 128px;
-        height: 128px;
-    }
+  .watch-video-list .list-item p {
+    font-size: 14px;
+    line-height: 24px;
+  }
 
-    .play-icon:hover {
-        width: 148px;
-        height: 148px;
-    }
+  .play-icon {
+    width: 98px;
+    height: 98px;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 
-    .logo-icon {
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  .play-icon-overlay {
+    width: 128px;
+    height: 128px;
+  }
+
+  .play-icon:hover .play-icon-overlay {
+    width: 148px;
+    height: 148px;
+  }
+
+  .logo-icon {
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 460px) {
-    .watch-video-section {
-        flex-direction: column;
-        height: auto;
-        background-image: url('../assets/images/watch-video/mobile-background-image.png'), url('../assets/images/watch-video/mask-group-3.png');
-        background-repeat: no-repeat, no-repeat;
-        background-position: center top, center bottom;
-        background-size: 100% 78%, contain;
-    }
+  .watch-video-section {
+    flex-direction: column;
+    height: auto;
+    background-image: url('../assets/images/watch-video/mobile-background-image.png'),
+      url('../assets/images/watch-video/mask-group-3.png');
+    background-repeat: no-repeat, no-repeat;
+    background-position: center top, center bottom;
+    background-size: 100% 74%, contain;
+  }
 
-    .video-placeholder {
-        min-height: 280px;
-    }
-
-    .play-icon {
-        top: 0%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 128px;
-        height: 128px;
-    }
-
-    .play-icon:hover {
-        width: 148px;
-        height: 148px;
-    }
-
-    .logo-icon {
-        bottom: 24px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
+  .video-placeholder {
+    min-height: 260px;
+  }
 }
