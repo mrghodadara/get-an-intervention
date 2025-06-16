@@ -54,7 +54,7 @@
   color: transparent;
   -webkit-text-stroke: 1px var(--text-color);
   text-stroke: 1px var(--text-color);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Poppins, Helvetica, sans-serif;
 }
 
 .we-understand-divider {
@@ -104,8 +104,13 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   height: 52px;
+  box-shadow: 0px 4px 6px 0px #00000014;
+}
+
+.secondary-button:hover {
+  transform: translateY(-4px);
 }
 
 .tablet-text-columns {
@@ -145,6 +150,7 @@
     line-height: 24px;
     letter-spacing: 0px;
   }
+
   .tablet-column-text .secondary-button {
     margin-top: 10px;
   }
