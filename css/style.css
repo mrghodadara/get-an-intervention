@@ -42,7 +42,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20.5px 0px 0px 0px;
+  padding: 20px 0px 0px 0px;
 }
 
 .nav-links-container {
@@ -50,7 +50,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 31px;
+  /* gap: 45px; */
 }
 
 .nav-links-divider {
@@ -58,11 +58,12 @@ a {
   height: 13px;
   opacity: 0.5;
   background-color: var(--white-color);
+  margin: 0px 45px 0px 30px;
 }
 
 .nav-links {
   display: flex;
-  gap: 31px;
+  gap: 35px;
   align-items: center;
   justify-content: flex-end;
 }
@@ -115,7 +116,7 @@ a {
 /* Footer Section */
 .footer {
   background: var(--element-color);
-  padding: 38px 0px;
+  padding: 35px 0px 37px;
 }
 
 .footer-section {
@@ -135,7 +136,7 @@ a {
 
 .footer-links {
   display: flex;
-  gap: 6px;
+  gap: 7px;
   align-items: center;
 }
 
