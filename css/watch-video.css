@@ -145,15 +145,18 @@
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 980px) {
   .watch-video-section {
-    flex-direction: column;
-    height: auto;
+    height: 1098px;
     background-image: url('../assets/images/watch-video/mobile-background-image.png'),
       url('../assets/images/watch-video/mask-group-3.png');
     background-repeat: no-repeat, no-repeat;
     background-position: center top, center bottom;
     background-size: 100% 59%, contain;
+  }
+
+  .watch-video-content {
+    align-items: flex-start;
   }
 
   .video-placeholder {
@@ -163,12 +166,21 @@
   .content-wrapper {
     max-width: 100%;
     margin: 0px;
-    padding: 102px 24px 110px 48px;
-    gap: 64px;
+    padding: 102px 0px 110px 0px;
+    gap: 60px;
   }
 
   .watch-video-heading {
     text-align: center;
+  }
+
+  .watch-video-list {
+    padding: 0px 4px 0px 26px;
+  }
+
+  .video-placeholder {
+    top: 57%;
+    left: 50%;
   }
 
   .play-icon {
@@ -199,12 +211,12 @@
 @media (max-width: 580px) {
   .watch-video-section {
     flex-direction: column;
-    height: auto;
+    height: 800px;
     background-image: url('../assets/images/watch-video/mobile-background-image.png'),
       url('../assets/images/watch-video/mask-group-3.png');
     background-repeat: no-repeat, no-repeat;
     background-position: center top, center bottom;
-    background-size: 100% 69%, contain;
+    background-size: 100% 65%, contain;
   }
 
   .video-placeholder {
@@ -212,8 +224,18 @@
   }
 
   .content-wrapper {
-    padding: 80px 16px 97px 16px;
-    gap: 36px;
+    padding: 80px 0px 97px 0px;
+    gap: 32px;
+  }
+
+  .watch-video-list {
+    padding: 0px;
+    gap: 18px;
+  }
+
+  .video-placeholder {
+    top: 64%;
+    left: 50%;
   }
 
   .watch-video-heading {
@@ -228,6 +250,10 @@
     line-height: 24px;
   }
 
+  .watch-video-list .list-item {
+    gap: 16px;
+  }
+
   .watch-video-list .list-item p {
     font-size: 14px;
     line-height: 24px;
@@ -239,6 +265,10 @@
     top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+
+  .play-icon img {
+    width: 24px;
   }
 
   .play-icon-overlay {
@@ -260,16 +290,12 @@
 
 @media (max-width: 460px) {
   .watch-video-section {
-    flex-direction: column;
-    height: auto;
-    background-image: url('../assets/images/watch-video/mobile-background-image.png'),
-      url('../assets/images/watch-video/mask-group-3.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: center top, center bottom;
-    background-size: 100% 74%, contain;
+    height: 900px;
+    background-size: 100% 76%, contain;
   }
 
   .video-placeholder {
-    min-height: 260px;
+    top: 73%;
+    left: 50%;
   }
 }
