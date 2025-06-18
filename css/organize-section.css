@@ -118,7 +118,7 @@
   color: var(--primary-color);
 }
 
-.service-button.insurance-advocacy:hover .info-icon {
+.service-button.organize-tooltip:hover .info-icon {
   opacity: 1;
 }
 
@@ -165,7 +165,7 @@
   border-color: transparent transparent var(--secondary-color) transparent;
 }
 
-.insurance-advocacy:hover .tooltip-text {
+.organize-tooltip:hover .tooltip-text {
   visibility: visible;
   opacity: 1;
 }

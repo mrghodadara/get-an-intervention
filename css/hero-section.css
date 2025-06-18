@@ -192,7 +192,7 @@
 
 .form-group input.error,
 .form-group select.error {
-  border-color: #ff6b6b;
+  border-color: var(--danger-color);
 }
 
 .form-group input::placeholder {
@@ -200,13 +200,78 @@
 }
 
 .form-group select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-image: url('data:image/svg+xml;charset=UTF-8,%3csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3e%3cpolyline points="6 9 12 15 18 9"%3e%3c/polyline%3e%3c/svg%3e');
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  background-size: 12px;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  color: var(--white-color);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 14px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 2px;
+  background-image: url('../assets/icons/dropdown-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 10px 5px !important;
+  padding-right: 36px;
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  background-image: url('../assets/icons/dropdown-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 10px 5px !important;
+}
+
+.form-group select:active {
+  background-image: url('../assets/icons/dropdown-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 10px 5px !important;
+}
+
+.form-group select:hover {
+  background-image: url('../assets/icons/dropdown-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 10px 5px !important;
+}
+
+.form-group select::-ms-expand {
+  display: none !important;
+}
+
+.form-group select[data-value] {
+  background-image: url('../assets/icons/dropdown-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 10px 5px !important;
+}
+
+.form-group select:not([size]) {
+  background-image: url('../assets/icons/dropdown-arrow.svg') !important;
+  background-repeat: no-repeat !important;
+  background-position: right 16px center !important;
+  background-size: 10px 5px !important;
+}
+
+.form-group select option {
+  background-color: #2a7d6c;
+  color: var(--white-color);
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.form-group select option:checked {
+  background-color: var(--primary-color) !important;
+  color: var(--text-color) !important;
+  font-weight: 600;
 }
 
 /* tooltip */
@@ -310,30 +375,6 @@ select.has-error + label {
   border-width: 0 8px 8px 8px;
   border-style: solid;
   border-color: transparent transparent #ff6b6b transparent;
-}
-
-.form-group select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  color: var(--white-color);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 14px 16px;
-  font-size: 16px;
-  font-weight: 400;
-  border-radius: 2px;
-
-  background-image: url("data:image/svg+xml,%3Csvg width='10' height='5' viewBox='0 0 10 5' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.99995 5L0.669823 -2.18762e-06L9.33008 -1.43051e-06L4.99995 5Z' fill='white'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-position: right 16px center;
-  background-size: 10px 5px;
-  padding-right: 36px;
-}
-
-.form-group select option {
-  background-color: #2a7d6c;
-  color: var(--white-color);
-  padding: 10px;
 }
 
 /* Responsive */

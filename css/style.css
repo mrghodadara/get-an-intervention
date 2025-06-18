@@ -30,6 +30,7 @@ a {
   text-decoration: none;
 }
 
+/* Container for the all sections */
 .container {
   max-width: 1184px;
   margin: 0 auto;
@@ -50,7 +51,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* gap: 45px; */
 }
 
 .nav-links-divider {

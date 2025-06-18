@@ -89,8 +89,6 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: transparent;
-  border: none;
   cursor: pointer;
   width: 208px;
   height: 208px;
@@ -106,7 +104,6 @@
   top: 50%;
   left: 67%;
   transform: translate(-50%, -50%);
-  background-color: transparent;
   border: none;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -117,7 +114,7 @@
   justify-content: center;
   align-items: center;
   background: #5bc8afcc;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--white-color);
   border-radius: 50%;
 }
 
@@ -148,11 +145,11 @@
 @media (max-width: 980px) {
   .watch-video-section {
     height: 1098px;
-    background-image: url('../assets/images/watch-video/mobile-background-image.png'),
+    background-image: url('../assets/images/watch-video/mobile-background-image.png'), url('../assets/images/watch-video/white-layer.png'),
       url('../assets/images/watch-video/mask-group-3.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: center top, center bottom;
-    background-size: 100% 59%, contain;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: center top, center top, center bottom;
+    background-size: 100% 59%, 100% 61%, contain;
   }
 
   .watch-video-content {
@@ -210,13 +207,8 @@
 
 @media (max-width: 580px) {
   .watch-video-section {
-    flex-direction: column;
     height: 800px;
-    background-image: url('../assets/images/watch-video/mobile-background-image.png'),
-      url('../assets/images/watch-video/mask-group-3.png');
-    background-repeat: no-repeat, no-repeat;
-    background-position: center top, center bottom;
-    background-size: 100% 65%, contain;
+    background-size: 100% 65%, 100% 68%, contain;
   }
 
   .video-placeholder {
@@ -291,7 +283,7 @@
 @media (max-width: 460px) {
   .watch-video-section {
     height: 900px;
-    background-size: 100% 76%, contain;
+    background-size: 100% 76%, 100% 79%, contain;
   }
 
   .video-placeholder {
