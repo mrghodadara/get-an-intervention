@@ -355,7 +355,7 @@ document
         .querySelectorAll('span[id$="Error"]')
         .forEach((el) => (el.textContent = ''));
 
-      window.location.href = '/thank-you.html';
+      window.location.href = './thank-you.html';
     }
   });
 
