@@ -165,7 +165,7 @@
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 640px) {
   .we-understand-section {
     background: var(--white-color);
     padding: 12px 0px 105px 0px;
